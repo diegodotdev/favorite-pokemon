@@ -4,7 +4,8 @@ import Image from "next/image";
 import { Percentage } from "@/components";
 
 export default async function Page() {
-  const data: Data[] = await fetchAllData();
+  const result = await fetchAllData();
+  const data: Data[] = result?.data;
 
   return (
     <div className="w-full px-5 md:px-0 md:w-[50vw] mx-auto flex flex-col gap-5">
